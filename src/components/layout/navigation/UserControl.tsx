@@ -10,7 +10,7 @@ const UserControl = () => {
       <Box
         backgroundColor="#E4E4E4"
         height={{ base: 6, md: 8 }}
-        width="4px"
+        width="3px"
       ></Box>
       <UserProfile />
     </HStack>

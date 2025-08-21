@@ -19,7 +19,7 @@ const SideNav = ({ children }: { children: React.ReactNode }) => {
       <Portal>
         <Drawer.Backdrop />
         <Drawer.Positioner>
-          <Drawer.Content backgroundColor="#ffffff">
+          <Drawer.Content backgroundColor="#ffffff" shadow="none">
             <Drawer.Body marginTop={12}>
               {NAVIGATION_LINKS.map((link) => (
                 <NavItem key={link.label} href={link.href} mobile>
@@ -34,7 +34,7 @@ const SideNav = ({ children }: { children: React.ReactNode }) => {
                 height="32"
                 fill="currentColor"
                 stroke="currentColor"
-                stroke-width="0"
+                strokeWidth="0"
                 data-part="close-trigger"
                 data-scope="dialog"
                 viewBox="0 0 24 24"

@@ -33,15 +33,14 @@ const HomeNav = ({ children }: { children: React.ReactNode }) => {
           </HStack>
 
           {/* RIGHT PART */}
-          <HStack>
+          <HStack gap={4}>
             <UserControl />
             <SideNav>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="25"
                 fill="none"
                 viewBox="0 0 32 25"
+                style={{ width: "30px !important", height: "30px !important" }}
               >
                 <path
                   stroke="#3C3C3C"
