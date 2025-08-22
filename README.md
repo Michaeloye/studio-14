@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Studio 14
+
+Welcome to the Studio 14 repository!
+
+This project is a modern web application built using [Next.js](https://nextjs.org/) and [TypeScript](https://www.typescriptlang.org/). It leverages the Chakra UI React component library for styling and UI components, and supports themes via `next-themes`. The homepage is available at [https://michael-oyebadejo-studio-14.vercel.app](https://michael-oyebadejo-studio-14.vercel.app).
+
+## Preview
+
+### Desktop
+![Desktop Preview](./michael-oyebadejo-studio-14.png)
+
+### Mobile
+![Mobile Preview](./michael-oyebadejo-studio-14-mobile.png)
+
+## Technologies Used
+
+- **Next.js** (v15.x)
+- **TypeScript**
+- **React** (v19.x)
+- **Chakra UI** (`@chakra-ui/react`)
+- **Emotion** (`@emotion/react`)
+- **React Toastify**
+- **React Icons**
+- **Jest** (Testing)
+- **ESLint** (Linting)
+
+## Directory Structure
+
+- **src/**  
+  Contains the main source code for the application.
+
+- **public/**  
+  Contains static assets served by Next.js, such as images and favicon.
+
+## Configuration
+
+- **next.config.ts**  
+  Configures Next.js with experimental optimizations for Chakra UI imports.
+
+  ```typescript
+  const nextConfig = {
+    experimental: {
+      optimizePackageImports: ["@chakra-ui/react"],
+    },
+  };
+  export default nextConfig;
+  ```
+
+## Scripts
+
+The following npm scripts are available:
+
+- `dev` — Start the development server
+- `build` — Build for production (uses Turbopack)
+- `start` — Start the production server
+- `lint` — Run ESLint
+- `test` — Run Jest tests
+- `test:watch` — Run Jest tests in watch mode
+- `test:coverage` — Run Jest tests with coverage reporting
+
+## Dependencies
+
+Main dependencies include:
+
+- `@chakra-ui/react`
+- `@emotion/react`
+- `next`
+- `next-themes`
+- `react`
+- `react-dom`
+- `react-icons`
+- `react-toastify`
+
+Dev dependencies include:
+
+- `@testing-library/react`
+- `jest`
+- `eslint`
+- `typescript`
+- and more.
 
 ## Getting Started
 
-First, run the development server:
+1. **Install dependencies:**
+   ```bash
+   nvm use #this uses the adviced node version 20.18
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   npm install
+   npm i @chakra-ui/cli
+   npx @chakra-ui/cli snippet add
+   ```
+2. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Build for production:**
+   ```bash
+   npm run build
+   npm start
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## License
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project does not specify a license. Please add one if desired.
 
-## Learn More
+## Author
 
-To learn more about Next.js, take a look at the following resources:
+- [Michael Oye](https://github.com/Michaeloye)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> For more information, check out the [homepage](https://michael-oyebadejo-studio-14.vercel.app).
