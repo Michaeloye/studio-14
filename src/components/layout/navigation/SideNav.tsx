@@ -1,5 +1,12 @@
 import { NAVIGATION_LINKS } from "@/constants";
-import { Box, Button, CloseButton, Drawer, Portal } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  CloseButton,
+  Drawer,
+  For,
+  Portal,
+} from "@chakra-ui/react";
 import React from "react";
 import NavItem from "./NavItem";
 import { MdClose } from "react-icons/md";
@@ -21,11 +28,13 @@ const SideNav = ({ children }: { children: React.ReactNode }) => {
         <Drawer.Positioner>
           <Drawer.Content backgroundColor="#ffffff" shadow="none">
             <Drawer.Body marginTop={12}>
-              {NAVIGATION_LINKS.map((link) => (
-                <NavItem key={link.label} href={link.href} mobile>
-                  {link.label}
-                </NavItem>
-              ))}
+              <For each={NAVIGATION_LINKS}>
+                {(link) => (
+                  <NavItem key={link.label} href={link.href} mobile>
+                    {link.label}
+                  </NavItem>
+                )}
+              </For>
             </Drawer.Body>
             <Drawer.CloseTrigger asChild>
               <svg

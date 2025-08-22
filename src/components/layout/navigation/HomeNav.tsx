@@ -2,7 +2,7 @@
 
 import BrandLogo from "@/components/logos/BrandLogo";
 import { NAVIGATION_LINKS } from "@/constants";
-import { Box, Button, HStack } from "@chakra-ui/react";
+import { Box, Button, For, HStack } from "@chakra-ui/react";
 import React from "react";
 import NavItem from "./NavItem";
 import UserControl from "./UserControl";
@@ -24,11 +24,13 @@ const HomeNav = ({ children }: { children: React.ReactNode }) => {
             <BrandLogo withText />
 
             <HStack h="100%" gap={1} display={{ base: "none", md: "flex" }}>
-              {NAVIGATION_LINKS.map((link) => (
-                <NavItem key={link.label} href={link.href}>
-                  {link.label}
-                </NavItem>
-              ))}
+              <For each={NAVIGATION_LINKS}>
+                {(link) => (
+                  <NavItem key={link.label} href={link.href}>
+                    {link.label}
+                  </NavItem>
+                )}
+              </For>
             </HStack>
           </HStack>
 
