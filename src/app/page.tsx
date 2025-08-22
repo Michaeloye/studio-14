@@ -1,4 +1,6 @@
-import Image from "next/image";
+"use client"
+
+import Resources from "@/features/resources";
 import {
   Box,
   Heading,
@@ -8,10 +10,10 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { LuSearch } from "react-icons/lu";
 
 export default function Home() {
   return (
+    <>
     <Box
       backgroundColor="#FAFAFA"
       paddingY={{ base: 16, md: 20 }}
@@ -75,5 +77,8 @@ export default function Home() {
         </InputGroup>
       </VStack>
     </Box>
+
+    <Resources />
+    </>
   );
 }
