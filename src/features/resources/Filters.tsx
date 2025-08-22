@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { FILTERS } from "@/constants";
+import { useResourcesContext } from "@/context/ResourcesContext";
 import {
   Box,
   Checkbox,
@@ -11,17 +12,10 @@ import {
 } from "@chakra-ui/react";
 
 const Filters = ({ isMobile = false }: { isMobile?: boolean }) => {
-  const [selected, setSelected] = useState<Record<string, string[]>>({
-    "key-foundational-principles": ['secure-base', 'wellbeing'],
-    "document-type": [],
-    categories: ['sample-1'],
-  });
+  const { filters, updateFilter } = useResourcesContext();
 
   const handleFilterChange = (filterKey: string, values: string[]) => {
-    setSelected((prev) => ({
-      ...prev,
-      [filterKey]: values,
-    }));
+    updateFilter(filterKey as keyof typeof filters, values);
   };
 
   return (
@@ -41,7 +35,7 @@ const Filters = ({ isMobile = false }: { isMobile?: boolean }) => {
           <Fieldset.Root key={filter.key} paddingX={4}>
             <CheckboxGroup
               name={filter.key}
-              value={selected[filter.key]}
+              value={filters[filter.key as keyof typeof filters]}
               onValueChange={(values) => handleFilterChange(filter.key, values)}
             >
               <Fieldset.Legend
@@ -71,7 +65,7 @@ const Filters = ({ isMobile = false }: { isMobile?: boolean }) => {
                           height="100%"
                           borderRadius="2px"
                           backgroundColor={
-                            selected[filter.key].includes(option.value)
+                            filters[filter.key as keyof typeof filters].includes(option.value)
                               ? "#3F3F3F"
                               : "transparent"
                           }

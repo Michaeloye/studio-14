@@ -1,3 +1,4 @@
+"use client"
 import BrandLogo from "@/components/logos/BrandLogo";
 import { NAVIGATION_LINKS } from "@/constants";
 import { Box, For, HStack } from "@chakra-ui/react";

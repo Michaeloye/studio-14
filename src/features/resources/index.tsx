@@ -3,6 +3,7 @@ import React from "react";
 import Filters from "./Filters";
 import FiltersDrawer from "./FiltersDrawer";
 import ResourceList from "./ResourceList";
+import SearchResultsSummary from "./SearchResultsSummary";
 
 const Resources = () => {
   return (
@@ -17,6 +18,7 @@ const Resources = () => {
           <FiltersDrawer />
         </GridItem>
         <GridItem width={{base: "87%", md: "100%" }} marginTop={12} marginX="auto">
+          <SearchResultsSummary />
           <ResourceList />
         </GridItem>
       </Grid>
