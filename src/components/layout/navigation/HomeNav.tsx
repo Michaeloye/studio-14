@@ -1,12 +1,9 @@
-"use client";
-
 import BrandLogo from "@/components/logos/BrandLogo";
 import { NAVIGATION_LINKS } from "@/constants";
-import { Box, Button, For, HStack } from "@chakra-ui/react";
+import { Box, For, HStack } from "@chakra-ui/react";
 import React from "react";
 import NavItem from "./NavItem";
 import UserControl from "./UserControl";
-import { RxHamburgerMenu } from "react-icons/rx";
 import SideNav from "./SideNav";
 
 const HomeNav = ({ children }: { children: React.ReactNode }) => {
