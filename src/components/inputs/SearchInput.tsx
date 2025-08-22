@@ -1,9 +1,32 @@
 import { useResourcesContext } from "@/context/ResourcesContext";
 import { Icon, Input, InputGroup } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 
 const SearchInput = () => {
   const { searchQuery, setSearchQuery } = useResourcesContext();
+
+  const inputRef = React.useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const handleFocus = () => {
+      if (inputRef.current) {
+        const rect = inputRef.current.getBoundingClientRect();
+        const absoluteTop = window.pageYOffset + rect.top;
+        const offsetPosition = absoluteTop - 87;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+    };
+
+    const inputElement = inputRef.current;
+    if (inputElement) {
+      inputElement.addEventListener("focus", handleFocus);
+      return () => inputElement.removeEventListener("focus", handleFocus);
+    }
+  }, []);
 
   return (
     <InputGroup
@@ -27,6 +50,7 @@ const SearchInput = () => {
       }
     >
       <Input
+        ref={inputRef}
         background="#ffffff"
         borderWidth="1px"
         borderColor={{ base: "transparent", md: "#A1A1A1" }}

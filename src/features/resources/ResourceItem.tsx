@@ -13,7 +13,6 @@ import {
   Flex,
   For,
   Heading,
-  Icon,
   Text,
   VStack,
 } from "@chakra-ui/react";
@@ -80,7 +79,7 @@ const ResourceItem = ({ resource }: { resource: TResource }) => {
       paddingX={6}
       borderWidth={1}
       gap={9}
-      paddingTop={14}
+      paddingTop={{ base: 32, md: "120px" }}
       paddingBottom={6}
       borderColor="#F2F2F2"
       boxShadow="0px 4px 12px 1px #0000000D"
@@ -95,7 +94,10 @@ const ResourceItem = ({ resource }: { resource: TResource }) => {
       >
         <Blob />
       </Box>
-      <Box position="relative" color="#000000" zIndex={1}>
+      {/* <Box color="#000000" zIndex={1}>
+        <TypeIcon />
+      </Box> */}
+      <Box position="absolute" top={14} color="#000000" zIndex={1}>
         <TypeIcon />
       </Box>
       <VStack position="relative" alignItems="flex-start" gap={4} zIndex={1}>

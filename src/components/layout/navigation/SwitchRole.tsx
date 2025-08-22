@@ -1,14 +1,19 @@
-import { HStack, Switch } from "@chakra-ui/react";
+import { Switch } from "@chakra-ui/react";
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const SwitchRole = () => {
   const [checked, setChecked] = useState(false);
 
+  const handleSwitch = (e: any) => {
+    setChecked(e.checked);
+    toast.success(`You've switched to ${e.checked ? "Employee" : "Employer"}`, {
+      position: "bottom-right",
+    });
+  };
+
   return (
-    <Switch.Root
-      checked={checked}
-      onCheckedChange={(e) => setChecked(e.checked)}
-    >
+    <Switch.Root checked={checked} onCheckedChange={handleSwitch}>
       <Switch.HiddenInput />
       <Switch.Control
         colorPalette="blue"

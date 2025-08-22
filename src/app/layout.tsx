@@ -3,6 +3,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { Provider } from "@/components/ui/provider";
 import HomeNav from "@/components/layout/navigation/HomeNav";
+import { ToastContainer } from "react-toastify";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -30,6 +31,9 @@ export default function RootLayout({
       <body className={`${inter.variable} ${poppins.variable}`}>
         <Provider>
           <HomeNav>{children}</HomeNav>
+
+
+          <ToastContainer />
         </Provider>
       </body>
     </html>

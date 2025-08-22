@@ -9,10 +9,11 @@ const Resources = () => {
   return (
     <Box
       paddingY={{ base: 0, md: 16 }}
+      paddingBottom={16}
       width={{ lg: "80%" }}
       marginX="auto"
     >
-      <Grid templateColumns={{ base: "1fr", md: "250px 1fr" }} gap={{ md: 12}}>
+      <Grid paddingX={{mdOnly: "20px"}} templateColumns={{ base: "1fr", md: "250px 1fr" }} gap={{ md: 12}}>
         <GridItem>
           <Filters />
           <FiltersDrawer />

@@ -10,12 +10,17 @@ import SideNav from "./SideNav";
 const HomeNav = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <Box>
+      <Box marginTop={{ base: 74, lg: 76.59 }}>
         <HStack
           height={{ base: 74, lg: 76.59 }}
           boxShadow="0px 4px 20px 0px #0000000F"
+          backgroundColor="#FFFFFF"
+          width="100%"
           justifyContent="space-between"
+          zIndex={99}
           px={{ base: 4, lg: 10 }}
+          position="fixed"
+          top="0"
         >
           {/* LEFT PART */}
           <HStack h="100%" gap={10}>
