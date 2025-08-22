@@ -4,6 +4,18 @@ Welcome to the Studio 14 repository!
 
 This project is a modern web application built using <a href="https://nextjs.org" target="_blank">Next.js</a> and <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>. It leverages the Chakra UI React component library for styling and UI components, and supports themes via `next-themes`. The homepage is available at <a href="https://michael-oyebadejo-studio-14.vercel.app" target="_blank">https://michael-oyebadejo-studio-14.vercel.app</a>.
 
+## Table of Contents
+
+- [Preview](#preview)
+- [Technologies Used](#technologies-used)
+- [Directory Structure](#directory-structure)
+- [Configuration](#configuration)
+- [Scripts](#scripts)
+- [Dependencies](#dependencies)
+- [Getting Started](#getting-started)
+- [License](#license)
+- [Author](#author)
+
 ## Preview
 
 ### Mobile
