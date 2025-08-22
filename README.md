@@ -6,11 +6,11 @@ This project is a modern web application built using [Next.js](https://nextjs.or
 
 ## Preview
 
-### Desktop
-![Desktop Preview](./michael-oyebadejo-studio-14.png)
-
 ### Mobile
 ![Mobile Preview](./michael-oyebadejo-studio-14-mobile.png)
+
+### Desktop
+![Desktop Preview](./michael-oyebadejo-studio-14.png)
 
 ## Technologies Used
 
