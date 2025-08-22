@@ -71,6 +71,7 @@ const ResourceItem = ({ resource }: { resource: TResource }) => {
 
   return (
     <Flex
+      height="100%"
       position="relative"
       fontFamily="var(--font-inter)"
       direction="column"
@@ -97,7 +98,7 @@ const ResourceItem = ({ resource }: { resource: TResource }) => {
       <Box position="relative" color="#000000" zIndex={1}>
         <TypeIcon />
       </Box>
-      <VStack alignItems="flex-start" gap={4}>
+      <VStack position="relative" alignItems="flex-start" gap={4} zIndex={1}>
         <Heading
           fontFamily="var(--font-poppins)"
           as="h2"
