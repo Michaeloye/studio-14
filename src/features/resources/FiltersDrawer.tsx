@@ -1,7 +1,6 @@
 import { Button, Drawer, Icon, Portal, Text } from "@chakra-ui/react";
 import React from "react";
 import Filters from "./Filters";
-import { IoFilter } from "react-icons/io5";
 
 const FiltersDrawer = () => {
   return (

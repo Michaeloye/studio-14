@@ -1,15 +1,12 @@
 import { NAVIGATION_LINKS } from "@/constants";
 import {
-  Box,
   Button,
-  CloseButton,
   Drawer,
   For,
   Portal,
 } from "@chakra-ui/react";
 import React from "react";
 import NavItem from "./NavItem";
-import { MdClose } from "react-icons/md";
 
 const SideNav = ({ children }: { children: React.ReactNode }) => {
   return (

@@ -10,7 +10,7 @@ jest.mock('react-toastify', () => ({
 // Chakra UI Switch
 jest.mock('@chakra-ui/react', () => ({
   Switch: {
-    Root: ({ children, checked, onCheckedChange }: any) => (
+    Root: ({ children, checked, onCheckedChange }: { children: React.ReactNode; checked: boolean; onCheckedChange: (params: { checked: boolean }) => void }) => (
       <button 
         role="switch" 
         aria-checked={checked}
@@ -21,7 +21,7 @@ jest.mock('@chakra-ui/react', () => ({
     ),
     HiddenInput: () => null,
     Control: () => <div data-testid="switch-control" />,
-    Label: ({ children }: any) => <span>{children}</span>,
+    Label: ({ children }: { children: React.ReactNode }) => <span>{children}</span>,
   },
 }))
 

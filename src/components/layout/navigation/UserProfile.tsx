@@ -6,12 +6,8 @@ import {
   Text,
   Button,
   Portal,
-  IconButton,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import SwitchRole from "./SwitchRole";
-import { BiChevronDown } from "react-icons/bi";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 const UserControl = () => {
   const [open, setOpen] = useState(false);

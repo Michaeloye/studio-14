@@ -5,6 +5,7 @@ import React, {
   useContext,
   useState,
   useMemo,
+  useCallback,
   ReactNode,
 } from "react";
 import { RESOURCES, TResource } from "@/data";
@@ -65,7 +66,7 @@ export const ResourcesProvider = ({ children }: ResourcesProviderProps) => {
     );
   };
 
-  const matchesFilters = (resource: TResource): boolean => {
+  const matchesFilters = useCallback((resource: TResource): boolean => {
     if (filters["key-foundational-principles"].length > 0) {
       const resourceTags = resource.tags.map((tag) =>
         tag.toLowerCase().replace(/\s+/g, "-")
@@ -81,7 +82,7 @@ export const ResourcesProvider = ({ children }: ResourcesProviderProps) => {
     }
 
     return true;
-  };
+  }, [filters]);
 
   // Compute filtered resources based on search and filters
   const filteredResources = useMemo(() => {
@@ -89,7 +90,7 @@ export const ResourcesProvider = ({ children }: ResourcesProviderProps) => {
       (resource) =>
         matchesSearch(resource, searchQuery) && matchesFilters(resource)
     );
-  }, [searchQuery, filters]);
+  }, [searchQuery, matchesFilters]);
 
   const updateFilter = (filterKey: keyof FilterState, values: string[]) => {
     setFilters((prev) => ({

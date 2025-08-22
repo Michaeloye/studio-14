@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 const SwitchRole = () => {
   const [checked, setChecked] = useState(false);
 
-  const handleSwitch = (e: any) => {
+  const handleSwitch = (e: { checked: boolean }) => {
     setChecked(e.checked);
     toast.success(`You've switched to ${e.checked ? "Employee" : "Employer"}`, {
       position: "bottom-right",
