@@ -384,75 +384,9 @@ const ConstructionScene = () => {
 
 const Page3D = () => {
   const [autoRotate, setAutoRotate] = useState(true);
-  const [showInstructions, setShowInstructions] = useState(true);
 
   return (
-    <div className="w-full h-screen bg-gradient-to-b from-blue-400 to-blue-600 relative overflow-hidden">
-      {/* Controls UI */}
-      <div className="absolute top-4 left-4 z-10 flex flex-col gap-3">
-        <div className="bg-white bg-opacity-15 backdrop-blur-md rounded-xl p-4 border border-white border-opacity-20">
-          <h3 className="text-white font-semibold mb-3 text-sm">Scene Controls</h3>
-          <div className="flex flex-col gap-2">
-            <button
-              onClick={() => setAutoRotate(!autoRotate)}
-              className="px-4 py-2 bg-white bg-opacity-20 backdrop-blur-md rounded-lg text-white hover:bg-opacity-30 transition-all text-sm font-medium"
-            >
-              {autoRotate ? '⏸️ Stop Rotation' : '▶️ Auto Rotate'}
-            </button>
-            <button
-              onClick={() => setShowInstructions(!showInstructions)}
-              className="px-4 py-2 bg-white bg-opacity-20 backdrop-blur-md rounded-lg text-white hover:bg-opacity-30 transition-all text-sm font-medium"
-            >
-              {showInstructions ? '👁️ Hide Help' : '❓ Show Help'}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Instructions Panel */}
-      {showInstructions && (
-        <div className="absolute top-4 right-4 z-10 max-w-xs">
-          <div className="bg-white bg-opacity-15 backdrop-blur-md rounded-xl p-4 border border-white border-opacity-20">
-            <h3 className="text-white font-semibold mb-3 text-sm">Navigation</h3>
-            <div className="text-white text-xs space-y-2 opacity-90">
-              <div>🖱️ <strong>Mouse:</strong> Click and drag to orbit</div>
-              <div>🔍 <strong>Zoom:</strong> Scroll wheel or pinch</div>
-              <div>📱 <strong>Touch:</strong> One finger to rotate, two to zoom</div>
-              <div>🎮 <strong>Auto-rotate:</strong> Toggle automatic camera movement</div>
-            </div>
-          </div>
-        </div>
-      )}
-      
-      {/* Site Title */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-center pointer-events-none">
-        <div className="bg-black bg-opacity-30 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-            UNDER CONSTRUCTION
-          </h1>
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">Rx</span>
-            </div>
-            <p className="text-2xl text-white font-semibold drop-shadow-md">
-              PharmacyOS
-            </p>
-          </div>
-          <p className="text-lg text-white opacity-80 max-w-md">
-            Building the future of pharmaceutical operations. Come back soon!
-          </p>
-        </div>
-      </div>
-
-      {/* Footer */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="bg-white bg-opacity-15 backdrop-blur-md rounded-full px-6 py-2">
-          <p className="text-white text-sm opacity-90">
-            🚧 Expected completion: Q2 2026
-          </p>
-        </div>
-      </div>
-
+    <div className="w-full h-screen">
       {/* 3D Canvas */}
       <Canvas
         shadows
