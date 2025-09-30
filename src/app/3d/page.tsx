@@ -386,7 +386,7 @@ const Page3D = () => {
   const [autoRotate, setAutoRotate] = useState(true);
 
   return (
-    <div className="w-full h-screen">
+    <div className="fixed inset-0 m-0 p-0" style={{ height: "100vh", width: "100vw" }}>
       {/* 3D Canvas */}
       <Canvas
         shadows
